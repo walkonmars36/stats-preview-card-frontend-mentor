@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
 
-  Get insights that help your business grow.
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card__image" title="women working at laptops"> </div>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="card__content">
+        <h1 class="card__content--heading">Get <span class="card__content--accent">insights</span> that help your business grow. </h1>
+        <p class="card__content--text">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+        <div class="stats__container">
+          <div class="stats"><h2 class="stats__number">10k+</h2> <p class="stats__heading">Companies</p></div>
+          <div class="stats"><h2 class="stats__number">314</h2> <p class="stats__heading">Templates</p></div>
+          <div class="stats"><h2 class="stats__number">12M+</h2> <p class="stats__heading">Queries</p></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Mark Lawson</a>. </div> -->
+  </body>
 </html>
