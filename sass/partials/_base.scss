@@ -1,6 +1,8 @@
+@use "../partials/variables" as *;
+
 html {
-  font-size: 15px;
-  font-family: "Inter", sans-serif;
+  font-size: var(--body-font-size);
+  font-family: var(--primary-font);
 }
 
 * {
@@ -10,6 +12,6 @@ html {
 }
 
 body {
-  background-color: hsl(233, 47%, 7%);
-  color: white;
+  background-color: var(--body-bg-color);
+  color: var(--text-white);
 }
