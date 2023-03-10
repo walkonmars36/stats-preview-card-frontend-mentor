@@ -1,0 +1,106 @@
+@use "../sass/partials/typography" as *;
+@use "../sass/partials/variables" as *;
+@use "../sass/partials/base" as *;
+
+.card {
+  &-container {
+    background-color: hsl(244, 38%, 16%);
+    width: 90%;
+    max-width: 1110px;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    background-color: hsl(277, 64%, 61%);
+    background-image: url(./images/image-header-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    aspect-ratio: 4 / 3;
+  }
+
+  &__content {
+    width: 85%;
+    margin: 2em auto;
+    text-align: center;
+  }
+
+  &__content-heading,
+  &__stats-number {
+    font-weight: 700;
+  }
+
+  &__content-text {
+    margin-top: clamp(1.067rem, 0.855rem + 0.845vw, 1.667rem);
+    color: hsla(0, 0%, 100%, 0.7);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  &__content-accent {
+    color: hsl(277, 64%, 61%);
+  }
+
+  &__stats + &__stats {
+    margin-top: 2rem;
+  }
+
+  &__stats-container {
+    margin-top: clamp(2.667rem, 1.962rem + 2.817vw, 4.667rem);
+  }
+
+  &__stats-heading {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+}
+
+@media (min-width: 890px) {
+  .card {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+      margin: 10rem auto;
+      padding: 0;
+    }
+
+    &__content {
+      width: 75%;
+      margin: 5em auto;
+      text-align: left;
+    }
+
+    &__content-text {
+      width: 85%;
+    }
+
+    &__image {
+      background-image: url(./images/image-header-desktop.jpg);
+      grid-row: 1;
+      grid-column: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__stats-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    &__stats + &__stats {
+      margin-top: 0;
+    }
+  }
+}
