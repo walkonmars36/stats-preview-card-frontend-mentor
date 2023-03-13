@@ -15,6 +15,7 @@ h2 {
   --text-white: #fff;
   --accent-color: hsl(277, 64%, 61%);
   --stats-heading-color: hsla(0, 0%, 100%, 0.5);
+  --footer-links: hsl(277, 81%, 75%);
   --primary-font: "Inter", sans-serif;
   --secondary-font: "Lexend Deca", sans-serif;
   --body-font-size: 15px;
@@ -40,11 +41,20 @@ body {
   color: var(--text-white);
 }
 
+a {
+  color: var(--img-bg-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--text-white);
+}
+
 .card-container {
   background-color: var(--card-bg-color);
   width: 90%;
   max-width: 1110px;
-  margin: 2rem auto;
+  margin: 2rem auto 3rem;
   border-radius: 1rem;
   overflow: hidden;
   padding-bottom: 1em;
@@ -124,4 +134,10 @@ body {
   .card__stats + .card__stats {
     margin-top: 0;
   }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=main.css.map */
