@@ -41,10 +41,14 @@ Users should be able to:
 
 ![stats preview card at desktop size](./readme-images/desktop_card__stats%20preview%20card%20component.png)
 
+---
+
 ### Links
 
 - Solution URL: [here](https://your-solution-url.com)
 - View the live site: [here](https://stats-preview-card-wom.netlify.app/)
+
+---
 
 ## My process
 
@@ -60,12 +64,16 @@ I used a mobile first approach and focussed on getting the structure of the HTML
 - CSS Grid
 - Mobile-first workflow
 
+---
+
 ### A few code examples
 
 In the first example I have styled the background image to cover the container and maintain an aspect-ratio of 4/3.
 
 When you use the aspect-ratio property in CSS, you don't need to set a specific width or height for the image. Instead, you can set the aspect-ratio property to the desired ratio, and the image will automatically adjust its size to maintain that ratio.
 This can be useful when you want to ensure that an image maintains a specific aspect ratio but you don't know the exact dimensions of the container or how the image will be displayed on different devices or screen sizes.
+
+---
 
 #### aspect-ratio
 
@@ -85,6 +93,8 @@ This can be useful when you want to ensure that an image maintains a specific as
 ---
 
 #### Clamp()
+
+---
 
 I used [clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) for the first time on this project. This allows you to set a minimum and maximum size for (in this case) font size, or another measurement value.
 I also used it here for margin.
@@ -112,19 +122,25 @@ h1 {
 
 #### ARIA - Accessible Rich Internet Applications
 
+---
+
 Accessibility to website content whether it be for the visually impaired, or to those with other cognitive issues is essential for modern development, particularly for sites developed with JavaScript (React etc)
 
 I must admit I've only just started to think about the importance of this with regard to markup and it's something I will spend time developing.
 
 In this project I used an empty div to place the image as a background image on the page. I decided that this was a purely decorative feature and wasn't in need of any alt text, according to [W3C](https://www.w3.org/WAI/tutorials/images/decorative/).
 
-I couldn't find a definitive answer to what I should put if using an empty div, so I settled on role="decorative". Correct me if I'm wrong please.
+I couldn't find a definitive answer to what I should put if using an empty div, (rather than an img tag), so I settled on role="decorative". Correct me if I'm wrong please.
 
 ```html
 <div class="card__image" role="presentation"></div>
 ```
 
+---
+
 #### CSS Custom Properties AKA CSS Variables
+
+---
 
 I have made the choice to switch from using SASS variables to CSS variables,
 both allow you to store and reuse values in your CSS, but SASS variables are not as flexible.
