@@ -80,10 +80,7 @@ This can be useful when you want to ensure that an image maintains a specific as
 
 ```css
 &__image {
-  background-color: var(--img-bg-color);
-  background-image: url(./images/image-header-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: var(--img-bg-color) url(./images/image-header-mobile.jpg) center / cover no-repeat;
   background-blend-mode: multiply;
   aspect-ratio: 4 / 3;
 }
