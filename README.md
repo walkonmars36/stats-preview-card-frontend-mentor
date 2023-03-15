@@ -6,7 +6,7 @@ This is a solution to the [card\_\_stats preview card component challenge on Fro
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshot-mobile)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,7 +14,6 @@ This is a solution to the [card\_\_stats preview card component challenge on Fro
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -96,7 +95,7 @@ This can be useful when you want to ensure that an image maintains a specific as
 
 ---
 
-I used [clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) for the first time on this project. This allows you to set a minimum and maximum size for (in this case) font size, or another measurement value.
+I used [clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp){:target="\_blank"} for the first time on this project. This allows you to set a minimum and maximum size for (in this case) font size, or another measurement value.
 I also used it here for margin.
 
 The function takes three values: a minimum, a preferred, and a maximum value. As the viewport is resized, the preferred value will kick in and calculate the size relative to the viewport width (vw) and root em size (rem), which is based on the root font size (usually set to 16px by default). The maximum value ensures that the size won't go beyond a certain limit. While you can use just a viewport width value for the preferred parameter, specifying a rem size can help provide a more consistent and reliable result across different devices and screen sizes. I used an online calculator for this which I've linked to below.
