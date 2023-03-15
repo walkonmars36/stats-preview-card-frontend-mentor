@@ -83,7 +83,7 @@ a:focus {
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height);
 }
-.card__content-accent {
+.card__content-heading--accent {
   color: var(--accent-color);
 }
 .card__stats + .card__stats {
