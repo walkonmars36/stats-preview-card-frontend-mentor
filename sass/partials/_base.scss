@@ -26,6 +26,10 @@ a:focus {
   color: var(--text-white);
 }
 
+ul {
+  list-style-type: none;
+}
+
 @media (min-width: 890px) {
   body {
     display: flex;

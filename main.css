@@ -3,10 +3,6 @@ h1 {
   font-size: clamp(2rem, 1.859rem + 0.563vw, 2.4rem);
 }
 
-h2 {
-  font-size: 1.6rem;
-}
-
 :root {
   --body-bg-color: hsl(233, 47%, 7%);
   --card-bg-color: hsl(246, 38%, 16%);
@@ -51,6 +47,10 @@ a:focus {
   color: var(--text-white);
 }
 
+ul {
+  list-style-type: none;
+}
+
 @media (min-width: 890px) {
   body {
     display: flex;
@@ -66,7 +66,6 @@ a:focus {
   margin: 2rem auto 3rem;
   border-radius: 1rem;
   overflow: hidden;
-  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
 }
@@ -76,11 +75,10 @@ a:focus {
   aspect-ratio: 4/3;
 }
 .card__content {
-  width: 85%;
-  margin: 2rem auto;
+  padding: 3em 1.5em 3em;
   text-align: center;
 }
-.card__content-heading, .card__stats-number {
+.card__content-heading {
   font-weight: var(--font-weight-bold);
 }
 .card__content-text {
@@ -91,6 +89,13 @@ a:focus {
 }
 .card__content-heading--accent {
   color: var(--accent-color);
+}
+.card__stats-number, .card__stats-heading {
+  display: block;
+}
+.card__stats-number {
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-bold);
 }
 .card__stats + .card__stats {
   margin-top: 2rem;
@@ -116,12 +121,12 @@ a:focus {
     padding: 0;
   }
   .card__content {
-    width: 75%;
-    margin: 5rem auto;
+    margin: 0;
+    padding: 5em;
     text-align: left;
   }
   .card__content-text {
-    width: 85%;
+    max-width: 40ch;
   }
   .card__image {
     background-image: url(./images/image-header-desktop.jpg);
@@ -135,7 +140,7 @@ a:focus {
   .card__stats-container {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    padding-right: clamp(0rem, -4.855rem + 8.182vw, 3rem);
   }
   .card__stats + .card__stats {
     margin-top: 0;

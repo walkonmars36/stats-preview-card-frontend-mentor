@@ -128,8 +128,12 @@ In this project I used an empty div to place the image as a background image on 
 
 I couldn't find a definitive answer to what I should put if using an empty div, (rather than an img tag), so I settled on role="decorative". Correct me if I'm wrong please.
 
+##### Update
+
+After feedback from [@grace](https://www.frontendmentor.io/profile/grace-snow) I have changed the empty div to a <picture> tag, this provides greater semantic meaning and makes the code more performant. Leaving an empty alt tag means a screenreader will ignore it.
+
 ```html
-<div class="card__image" role="presentation"></div>
+<picture class="card__image" alt=""></picture>
 ```
 
 ---
