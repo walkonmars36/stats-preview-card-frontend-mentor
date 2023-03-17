@@ -14,12 +14,6 @@
     flex-direction: column;
   }
 
-  // &__image {
-  //   background: var(--img-bg-color) url(./images/image-header-mobile.jpg) center / cover no-repeat;
-  //   background-blend-mode: multiply;
-  //   aspect-ratio: 4 / 3;
-  // }
-
   &-container::before {
     content: "";
     display: block;
@@ -27,8 +21,8 @@
     background-blend-mode: multiply;
     aspect-ratio: 4 / 3;
   }
+
   &__content {
-    // margin: 2rem auto;
     padding: 3em 1.5em 3em;
     text-align: center;
 

@@ -79,7 +79,9 @@ This can be useful when you want to ensure that an image maintains a specific as
 ---
 
 ```css
-&__image {
+&-container::before {
+  content: "";
+  display: block;
   background: var(--img-bg-color) url(./images/image-header-mobile.jpg) center / cover no-repeat;
   background-blend-mode: multiply;
   aspect-ratio: 4 / 3;
@@ -124,16 +126,18 @@ Accessibility to website content whether it be for the visually impaired, or to 
 
 I must admit I've only just started to think about the importance of this with regard to markup and it's something I will spend time developing.
 
-In this project I used an empty div to place the image as a background image on the page. I decided that this was a purely decorative feature and wasn't in need of any alt text, according to [W3C](https://www.w3.org/WAI/tutorials/images/decorative/).
+In this project at first used an empty div to place the image as a background image on the page. I decided that this was a purely decorative feature and wasn't in need of any alt text, according to [W3C](https://www.w3.org/WAI/tutorials/images/decorative/).
 
-I couldn't find a definitive answer to what I should put if using an empty div, (rather than an img tag), so I settled on role="decorative". Correct me if I'm wrong please.
+After feedback on my code from [@grace](https://www.frontendmentor.io/profile/grace-snow) I went away and read up on what the best practice is for the use of decorative images (which I think this is). Leaving an empty div is not best practice, so as I was happy with how I'd styled it as a background image, I finally decided to use a pseudo element, ::before. This removes it from the markup completely and so would also not interfere with any screen reader.
 
-##### Update
-
-After feedback from [@grace](https://www.frontendmentor.io/profile/grace-snow) I have changed the empty div to a <picture> tag, this provides greater semantic meaning and makes the code more performant. Leaving an empty alt tag means a screenreader will ignore it.
-
-```html
-<picture class="card__image" alt=""></picture>
+```css
+&-container::before {
+  content: "";
+  display: block;
+  background: var(--img-bg-color) url(./images/image-header-mobile.jpg) center / cover no-repeat;
+  background-blend-mode: multiply;
+  aspect-ratio: 4 / 3;
+}
 ```
 
 ---
